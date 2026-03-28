@@ -51,3 +51,9 @@ jobs:
       # Run Build Project
       - name: Build gradle project
         run: ./gradlew build
+        - name: Upload APK
+        - name: Upload APK
+  - uses: actions/upload-artifact@v4
+    with:
+    name: apk-result
+    path: app/build/outputs/apk/**/*.apk
